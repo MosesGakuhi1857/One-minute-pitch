@@ -5,8 +5,8 @@ class Config:
   General configuration parent class
   '''
   SECRET_KEY = 'SECRET'
-  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringaaccess:12345678@localhost/pitches'
-  SQLALCHEMY_TRACK_MODIFICATIONS = True
+  
+  SQLALCHEMY_TRACK_MODIFICATIONS = False
   UPLOADED_PHOTOS_DEST ='app/static/photos'
 
   #  email configurations
@@ -23,7 +23,7 @@ class ProdConfig(Config):
     Config: The parent configuration class with general configuration settings
   '''
   SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringaaccess:12345678@localhost/pitches'
+  
 
 class TestConfig(Config):
   '''
