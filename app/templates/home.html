@@ -34,7 +34,7 @@
   <div class="tabbable-panel">
     <div class="tabbable-line">
       <ul class="nav nav-tabs nav-justified" role="tablist">
-        <li class="active success">
+        <li class="active">
           <a href="#business" class="nav-link" data-toggle="tab">Business Pitches</a>
         </li>
         <li>
@@ -55,19 +55,19 @@
   </div>
 
   <div class="tab-content">
-    <div id="product" class="tab-pane active">
+    <div id="business" class="tab-pane active">
       {{ macro.display(businesspitch) }}
     </div>
-    <div id="interview" class="tab-pane">
+    <div id="entertainment" class="tab-pane">
       <span>{{ macro.display(entertainmentpitch) }}</span>
     </div>
-    <div id="pickupline" class="tab-pane">
+    <div id="lyrics" class="tab-pane">
       {{ macro.display(lyricspitch) }}
     </div>
-    <div id="promotion" class="tab-pane">
+    <div id="advertisement" class="tab-pane">
       {{ macro.display(advertisementpitch) }}
     </div>
-    <div id="promotion" class="tab-pane">
+    <div id="relationship" class="tab-pane">
       {{ macro.display(relationshippitch) }}
     </div>
   </div>
