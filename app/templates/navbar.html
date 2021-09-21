@@ -1,0 +1,28 @@
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <ul>
+          <li><a href="/" class="navbar-brand">Home</a></li>
+        </ul>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+         <li><a href="/pitches/new/" class="navbar-brand"> Post A Pitch</a></li> 
+          
+          {% if current_user.is_authenticated %}
+          <li class="me-auto"><a href="{{url_for('main.profile', uname=current_user.username)}}">LOGGED IN AS {{current_user.username}}</a>
+          </li>
+          <li><a href="{{url_for('auth.logout')}}">SIGN OUT</a></li>
+          {% else %}
+          <li><a href="{{url_for('auth.login')}}">SIGN IN</a></li>
+          {% endif%}
+        </ul>
+      </div>
+    </div>
+  </div>
