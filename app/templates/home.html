@@ -1,0 +1,75 @@
+{% extends 'bootstrap/base.html' %}
+{% import 'macros.html' as macro %}
+{% block navbar %}
+{% include 'navbar.html' %}
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="container">
+
+  <div class="card bg-dark text-white">
+
+    <div class="card-img-overlay">
+      <h2 class="card-title">One-Minute-Pitch</h2>
+      <hr>
+      <br>
+  
+      <p style="font-size:40px;color:dark">You only have 60 seconds to impress someone. 1 minute can make or break you. How do we make sure that you use your 1 minute to actually say something meaningful?</p>
+      <p class="card-text">Created with love by Musah Kings</p>
+      <hr>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+  <div class="tabbable-panel">
+    <div class="tabbable-line">
+      <ul class="nav nav-tabs nav-justified" role="tablist">
+        <li class="active success">
+          <a href="#business" class="nav-link" data-toggle="tab">Business Pitches</a>
+        </li>
+        <li>
+          <a href="#entertainment" class="nav-link" data-toggle="tab">Entertainment Pitches</a>
+        </li>
+        <li>
+          <a href="#lyrics" class="nav-link" data-toggle="tab">Lyrics Lines</a>
+        </li>
+        <li>
+          <a href="#advertisement" class="nav-link" data-toggle="tab">Advertisement Pitches</a>
+        </li>
+
+        <li>
+          <a href="#relationship" class="nav-link" data-toggle="tab">Relationship Pitches</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tab-content">
+    <div id="product" class="tab-pane active">
+      {{ macro.display(businesspitch) }}
+    </div>
+    <div id="interview" class="tab-pane">
+      <span>{{ macro.display(entertainmentpitch) }}</span>
+    </div>
+    <div id="pickupline" class="tab-pane">
+      {{ macro.display(lyricspitch) }}
+    </div>
+    <div id="promotion" class="tab-pane">
+      {{ macro.display(advertisementpitch) }}
+    </div>
+    <div id="promotion" class="tab-pane">
+      {{ macro.display(relationshippitch) }}
+    </div>
+  </div>
+</div>
+{% endblock %}
