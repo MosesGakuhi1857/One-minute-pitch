@@ -16,9 +16,9 @@
         </blockquote>
         <hr>
         
-        <a href="{{url_for('main.upvote', pitch_id = category.id)}}" class="btn btn-outline-dark">Upvote
+        <a href="{{url_for('main.upvote', pitch_id = category.id)}}" class="btn btn-outline-dark"> <i class="fas fa-thumbs-up"></i>
           <span>{{category.upvotes.count()}}</span></a>
-        <a href="{{url_for('main.downvote', pitch_id = category.id)}}" class="btn btn-outline-dark">Downvote
+        <a href="{{url_for('main.downvote', pitch_id = category.id)}}" class="btn btn-outline-dark"> <i class="fas fa-thumbs-down"></i>
           <span>{{category.downvotes.count()}}</span></a>
           <a href="{{url_for('main.new_comment',pitch_id = category.id)}}" class="btn btn-primary">Comments</a>
       </div>
