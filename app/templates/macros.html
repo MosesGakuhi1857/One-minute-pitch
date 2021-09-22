@@ -1,12 +1,14 @@
-{% extends 'bootstrap/base.html' %}
+
 {% macro display(category_list) %}
+
+
 <div class="row mt">
   {% if category_list %}
   {% for category in category_list %}
-  <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 col-xl-12">
+  <div class="col-md-6 col-sm-12 col-xs-12 col-lg-4 col-xl-12">
     <div class="thumbnail text-center">
       <h3>{{category.title}}</h3>
-      <hr>
+      
       <div>
         <blockquote>
           <h4>{{category.description}}</h4>
@@ -14,13 +16,16 @@
             Posted by {{category.user.username}}
           </footer>
         </blockquote>
-        <hr>
+        
         
         <a href="{{url_for('main.upvote', pitch_id = category.id)}}" class="btn btn-outline-dark"> <i class="fas fa-thumbs-up"></i>
           <span>{{category.upvotes.count()}}</span></a>
         <a href="{{url_for('main.downvote', pitch_id = category.id)}}" class="btn btn-outline-dark"> <i class="fas fa-thumbs-down"></i>
           <span>{{category.downvotes.count()}}</span></a>
           <a href="{{url_for('main.new_comment',pitch_id = category.id)}}" class="btn btn-primary">Comments</a>
+
+          <br>
+          <hr>
       </div>
     </div>
   </div>
@@ -44,3 +49,5 @@
   {% endif %}
 </div>
 {% endmacro %}
+
+
